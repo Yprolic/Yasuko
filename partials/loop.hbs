@@ -21,7 +21,13 @@
     </section>
     <div class="post-excerpt-mirror">
     <div class="post-excerpt-mirror-mask">
-    <a href="{{url}}"><img src="{{img_url feature_image}}" alt=""></a>
+    {{#if img_url feature_image}}
+        <a href="{{url}}"><img src="{{#if img_url feature_image}}" alt=""></a>
+    {{else}}
+        <a href="{{url}}">
+            <img src="https://www.bing.com/az/hprichbg/rb/EuropeanBarracuda_ZH-CN13968323163_1920x1080.jpg" alt="">
+        </a>
+    {{/if}}
 
     <div class="excert-detail-container">
         <div class="post-meta">
