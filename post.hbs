@@ -43,6 +43,16 @@
 
     <article class="{{post_class}}">
 
+     <section class="post-content">
+     <div class="single-post-inner">
+        {{content}}
+        <div class="tag-box">
+          {{tags prefix="" separator=" "}}
+        </div>
+     </div>
+    </section>
+
+
     {{#author}}
                 <section class="author">
                  {{#if profile_image}}
@@ -69,7 +79,7 @@
 
             </section>
         </section>
-    {{/author}}
+        {{/author}}
 
 
 
