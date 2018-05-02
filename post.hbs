@@ -9,7 +9,7 @@
     <img src="{{feature_image}}!wechatsmall" class="wechat-only">
     <header id="header" class="home-header blog-background banner-mask lazy" data-url="{{feature_image}}">
     {{else}}
-    <header id="header" class="home-header blog-background banner-mask lazy" style="background-image:no-cover">
+    <header id="header" class="home-header blog-background banner-mask lazy {{#if @blog.cover_image}}" style="background-image: url({{@blog.cover_image}}){{else}}no-cover{{/if}}">
     {{/if}}
 
         <div class="nav-header">
