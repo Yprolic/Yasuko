@@ -8,7 +8,10 @@
     {{#if feature_image}}
         <img src="{{img_url feature_image}}" alt="">
     {{else}}
-        <img src="https://www.bing.com/az/hprichbg/rb/EuropeanBarracuda_ZH-CN13968323163_1920x1080.jpg" alt="">
+        <img id="feature_image" alt="">
+        <script>
+            document.setElementById("feature_image").src = "https://picsum.photos/800/450/?image=123" + Math.floor(Math.random() * 1000);
+        </script>
     {{/if}}
     </a>
     <div class="info-mask">
@@ -31,8 +34,7 @@
         {{else}}
         <img id="feature_image" alt="">
         <script>
-            var obj = document.setElementById("feature_image");
-            var imgSrc = obj.setAttribute("src", "https://picsum.photos/800/450/?image=123");
+            document.setElementById("feature_image").src = "https://picsum.photos/800/450/?image=123" + Math.floor(Math.random() * 1000);
         </script>
         {{/if}}
         </a>
